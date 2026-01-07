@@ -1,0 +1,11 @@
+D:\Task-project\backend\src\OrderManagement.Domain\bin\Debug\net10.0\OrderManagement.Domain.deps.json
+D:\Task-project\backend\src\OrderManagement.Domain\bin\Debug\net10.0\OrderManagement.Domain.dll
+D:\Task-project\backend\src\OrderManagement.Domain\bin\Debug\net10.0\OrderManagement.Domain.pdb
+D:\Task-project\backend\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Task-project\backend\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.AssemblyInfoInputs.cache
+D:\Task-project\backend\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.AssemblyInfo.cs
+D:\Task-project\backend\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.csproj.CoreCompileInputs.cache
+D:\Task-project\backend\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.dll
+D:\Task-project\backend\src\OrderManagement.Domain\obj\Debug\net10.0\refint\OrderManagement.Domain.dll
+D:\Task-project\backend\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.pdb
+D:\Task-project\backend\src\OrderManagement.Domain\obj\Debug\net10.0\ref\OrderManagement.Domain.dll

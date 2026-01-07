@@ -1,0 +1,104 @@
+﻿<div class="order-details-container">
+  <div *ngIf="order$ | async as order" class="order-content">
+    <div class="header-gradient">
+      <h2>Order Details - #{{ order.id }}</h2>
+      <span class="status" [class.completed]="order.status === 'Completed'">
+        {{ order.status }}
+      </span>
+    </div>
+
+    <div class="order-info-card">
+      <p><strong>Customer:</strong> {{ order.customerName }} (ID: {{ order.customerId }})</p>
+      <p><strong>Created:</strong> {{ order.createdAt | date:'medium' }}</p>
+      <p class="total"><strong>Total:</strong> {{ order.total }} {{ order.currency }}</p>
+    </div>
+
+    <div class="items-section">
+      <h3>Order Items</h3>
+
+      <div *ngIf="order.items.length === 0" class="no-items">
+        No items in this order yet.
+      </div>
+
+      <table *ngIf="order.items.length > 0">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Line Total</th>
+            <th *ngIf="order.status !== 'Completed'">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of order.items">
+            <td>{{ item.productName }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.unitPrice }} {{ item.currency }}</td>
+            <td class="line-total">{{ item.lineTotal }} {{ item.currency }}</td>
+            <td *ngIf="order.status !== 'Completed'">
+              <button
+                (click)="removeItem(order.id, item.productId)"
+                class="btn-remove"
+              >
+                Remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div *ngIf="order.status !== 'Completed'" class="add-item-section">
+      <h3>Add Item to Order</h3>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="productId">Product:</label>
+          <select
+            id="productId"
+            [(ngModel)]="productId"
+            class="product-select"
+          >
+            <option [value]="null" disabled selected>Choose a product...</option>
+            <option *ngFor="let product of products$ | async" [value]="product.id">
+              {{ product.name }} - ${{ product.price }}
+            </option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="quantity">Quantity:</label>
+          <input
+            id="quantity"
+            type="number"
+            [(ngModel)]="quantity"
+            placeholder="Enter quantity"
+            min="1"
+          />
+        </div>
+        <button
+          (click)="addItem(order.id)"
+          [disabled]="!productId || !quantity"
+          class="btn-add"
+        >
+          Add Item
+        </button>
+      </div>
+      <small>Enter a product ID between 1 and 10 (from seeded products)</small>
+    </div>
+
+    <div class="actions">
+      <button
+        *ngIf="order.status !== 'Completed' && order.items.length > 0"
+        (click)="completeOrder(order.id)"
+        class="btn-complete"
+      >
+        Complete Order
+      </button>
+      <button (click)="goBack()" class="btn-back">Back to Create Order</button>
+    </div>
+  </div>
+
+  <div *ngIf="!(order$ | async)" class="loading">
+    Loading order details...
+  </div>
+</div>

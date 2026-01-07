@@ -1,0 +1,30 @@
+﻿<div class="create-order-container">
+  <div class="header-gradient">
+    <h2>Create New Order</h2>
+  </div>
+
+  <div class="form-card">
+    <div class="form-section">
+      <label for="customerId">Select Customer:</label>
+      <select
+        id="customerId"
+        [(ngModel)]="customerId"
+        class="customer-select"
+      >
+        <option [value]="null" disabled selected>Choose a customer...</option>
+        <option *ngFor="let customer of customers$ | async" [value]="customer.id">
+          {{ customer.name }}
+        </option>
+      </select>
+    </div>
+
+    <button (click)="createOrder()" [disabled]="!customerId" class="btn-create">
+      Create Order
+    </button>
+
+    <div *ngIf="createdOrderId" class="success-message">
+      <p> Order created successfully! Order ID: {{ createdOrderId }}</p>
+      <button (click)="viewOrder()" class="btn-view">View Order Details</button>
+    </div>
+  </div>
+</div>

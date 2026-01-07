@@ -1,0 +1,15 @@
+D:\Task-project\backend\src\OrderManagement.Application\bin\Debug\net10.0\OrderManagement.Application.deps.json
+D:\Task-project\backend\src\OrderManagement.Application\bin\Debug\net10.0\OrderManagement.Application.dll
+D:\Task-project\backend\src\OrderManagement.Application\bin\Debug\net10.0\OrderManagement.Application.pdb
+D:\Task-project\backend\src\OrderManagement.Application\bin\Debug\net10.0\OrderManagement.Domain.dll
+D:\Task-project\backend\src\OrderManagement.Application\bin\Debug\net10.0\OrderManagement.Domain.pdb
+D:\Task-project\backend\src\OrderManagement.Application\obj\Debug\net10.0\OrderManagement.Application.csproj.AssemblyReference.cache
+D:\Task-project\backend\src\OrderManagement.Application\obj\Debug\net10.0\OrderManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Task-project\backend\src\OrderManagement.Application\obj\Debug\net10.0\OrderManagement.Application.AssemblyInfoInputs.cache
+D:\Task-project\backend\src\OrderManagement.Application\obj\Debug\net10.0\OrderManagement.Application.AssemblyInfo.cs
+D:\Task-project\backend\src\OrderManagement.Application\obj\Debug\net10.0\OrderManagement.Application.csproj.CoreCompileInputs.cache
+D:\Task-project\backend\src\OrderManagement.Application\obj\Debug\net10.0\OrderMan.B2E1D241.Up2Date
+D:\Task-project\backend\src\OrderManagement.Application\obj\Debug\net10.0\OrderManagement.Application.dll
+D:\Task-project\backend\src\OrderManagement.Application\obj\Debug\net10.0\refint\OrderManagement.Application.dll
+D:\Task-project\backend\src\OrderManagement.Application\obj\Debug\net10.0\OrderManagement.Application.pdb
+D:\Task-project\backend\src\OrderManagement.Application\obj\Debug\net10.0\ref\OrderManagement.Application.dll

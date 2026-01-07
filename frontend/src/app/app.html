@@ -1,0 +1,18 @@
+<div class="app-container">
+  <header>
+    <h1>{{ title }}</h1>
+    <nav>
+      <a routerLink="/products" routerLinkActive="active">Products</a>
+      <a routerLink="/create-order" routerLinkActive="active">Create Order</a>
+      <a routerLink="/orders" routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">Orders</a>
+    </nav>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Order Management System</p>
+  </footer>
+</div>

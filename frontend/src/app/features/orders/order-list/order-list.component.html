@@ -1,0 +1,58 @@
+<div class="order-list-container">
+  <div class="header-gradient">
+    <h2>Order History</h2>
+    <button (click)="refreshOrders()" class="btn-refresh">
+      <span>🔄</span> Refresh
+    </button>
+  </div>
+
+  <div class="orders-content">
+    <div *ngIf="orders$ | async as orders; else loading">
+      <div *ngIf="orders.length === 0; else orderTable" class="no-orders">
+        <p>No orders found. Create your first order to get started!</p>
+        <a routerLink="/create-order" class="btn-create-first">Create Order</a>
+      </div>
+
+      <ng-template #orderTable>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Created Date</th>
+                <th>Status</th>
+                <th>Total Amount</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of orders">
+                <td class="order-id">#{{ order.id }}</td>
+                <td>{{ order.customerName }}</td>
+                <td>{{ order.createdAt | date:'MMM d, y, h:mm a' }}</td>
+                <td>
+                  <span class="status-badge" [class.completed]="order.status === 'Completed'">
+                    {{ order.status }}
+                  </span>
+                </td>
+                <td class="total-amount">{{ order.total | number:'1.2-2' }} {{ order.currency }}</td>
+                <td>
+                  <button (click)="viewOrderDetails(order.id)" class="btn-view">
+                    View Details
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </ng-template>
+    </div>
+
+    <ng-template #loading>
+      <div class="loading">
+        <p>Loading orders...</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

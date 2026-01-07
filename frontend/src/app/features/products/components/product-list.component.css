@@ -1,0 +1,106 @@
+﻿.product-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-gradient {
+  background: linear-gradient(135deg, #7FB3D5, #A9CCE3)
+;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-gradient h2 {
+  color: white;
+  margin: 0;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-refresh {
+  background-color: white;
+  color: #8E9CC6;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-refresh:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: linear-gradient(160deg, #6DB3C8, #8E9CC6);
+  padding: 15px 20px;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .description {
+  color: #666;
+  margin: 15px 20px;
+  min-height: 40px;
+  line-height: 1.5;
+}
+
+.product-card .price {
+  font-size: 1.4em;
+  font-weight: bold;
+  background: linear-gradient(160deg, #6DB3C8, #8E9CC6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 15px 20px;
+}
+
+.product-card .product-id {
+  font-size: 0.9em;
+  color: #999;
+  margin: 0 20px 20px 20px;
+}
+
+.no-products {
+  text-align: center;
+  padding: 60px 40px;
+  color: #666;
+  font-size: 1.2em;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  margin-top: 20px;
+}

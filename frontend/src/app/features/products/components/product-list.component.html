@@ -1,0 +1,20 @@
+﻿<div class="product-list-container">
+  <div class="header-gradient">
+    <h2>Products</h2>
+    <button (click)="loadProducts()" class="btn-refresh">Refresh Products</button>
+  </div>
+
+  <div class="products-grid">
+    <div *ngFor="let product of products$ | async" class="product-card">
+      <div class="card-header">
+        <h3>{{ product.name }}</h3>
+      </div>
+      <p class="description">{{ product.description }}</p>
+      <p class="price">{{ product.price }} {{ product.currency }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="(products$ | async)?.length === 0" class="no-products">
+    No products available. Click "Refresh Products" to load.
+  </div>
+</div>
